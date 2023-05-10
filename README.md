@@ -18,12 +18,16 @@ const y: 123 = subtract(x, 64_000)
 const p: true = greater(1_001, 1_000)
 ```
 
+## Summary
+
+It can type check numbers fast, up to 2**16 (=65_536), but the compiler will sometimes yell at you, especially when both the left-hand and right-hand sides are generic
+
 ## Benefits and drawbacks
 - Fast type checking
 - Add and subtract big numbers up to 2**16 (= 65_536) (it can be increased but bundling will be slower)
 - Boolean inequalities
 - Slow bundling (~10 seconds)
-- The compiler will be mad at you if you nest numbers in objects and/or do arithmetic with too much generics
+- The compiler will sometimes yell at you
 
 ## Inequalities
 
@@ -33,7 +37,7 @@ Several ways to attempt inequalities type checking, unfortunately none of them a
 
 - Fast type checking
 - You need to have the left-hand side type to compare
-- The compiler will be mad at you if you nest numbers in objects and/or do arithmetic with too much generics
+- The compiler will sometimes yell at you
 
 ```tsx
 export type Greater<X extends number, Y extends number> =
