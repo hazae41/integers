@@ -23,6 +23,7 @@ const p: true = greater(1_001, 1_000)
 - Add and subtract big numbers up to 2**16 (= 65_536) (it can be increased but bundling will be slower)
 - Boolean inequalities
 - Slow bundling (~10 seconds)
+- The compiler will be mad at you if you nest numbers in objects and/or do arithmetic with too much generics
 
 ## Inequalities
 
